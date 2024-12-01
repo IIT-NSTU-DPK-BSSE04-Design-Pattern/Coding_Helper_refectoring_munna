@@ -7,7 +7,18 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.logging.Logger;
 
+class MyClass {
+
+    Logger logger = Logger.getLogger(getClass().getName());
+
+    public void doSomething() {
+        // ...
+        logger.info("My Message");  // Compliant, output via logger
+        // ...
+    }
+}
 public class TfIdfCalculate {
 
     ArrayList<String[]> FileWordProject1 = new ArrayList<>();
@@ -140,7 +151,7 @@ public class TfIdfCalculate {
                 // System.out.println(term+" 2="+tfidf);
                 tfidfvector[count] = tfidf;
                 count++;
-                //  System.out.println(term+" tfidf="+tfidf);
+                  System.out.println (term+" tfidf=" +tfidf);
             }
             tfidfvectorProject2.add(tfidfvector);
             
